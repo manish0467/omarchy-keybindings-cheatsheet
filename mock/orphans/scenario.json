@@ -1,0 +1,47 @@
+{
+ "records": [
+  [
+   "SUPER + RETURN",
+   "Terminal"
+  ],
+  [
+   "SUPER + W / SUPER + Q",
+   "Close window"
+  ],
+  [
+   "XF86AudioMute",
+   "Mute"
+  ]
+ ],
+ "annotations": [
+  {
+   "chord": "SUPER + RETURN",
+   "note": "fish shell, tmux inside",
+   "tags": [
+    "apps",
+    "terminal"
+   ],
+   "createdAt": 1763000000,
+   "updatedAt": 1763000100
+  },
+  {
+   "chord": "SUPER + W / SUPER + Q",
+   "note": "vim-style close habit",
+   "tags": [
+    "windows"
+   ],
+   "createdAt": 1763000000,
+   "updatedAt": 1763000100
+  },
+  {
+   "chord": "SUPER + GONE",
+   "note": "rebound away - old note kept",
+   "tags": [
+    "legacy"
+   ],
+   "createdAt": 1762000000,
+   "updatedAt": 1762000000,
+   "descriptionAtSave": "Some old action"
+  }
+ ]
+}

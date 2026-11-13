@@ -1,0 +1,48 @@
+{
+ "records": [
+  [
+   "SUPER + K",
+   "Keybindings"
+  ],
+  [
+   "SUPER + SPACE",
+   "Omarchy menu"
+  ],
+  [
+   "SUPER + RETURN",
+   "Terminal"
+  ],
+  [
+   "SUPER SHIFT + RETURN",
+   "Browser"
+  ],
+  [
+   "SUPER SHIFT + F",
+   "File manager"
+  ],
+  [
+   "SUPER + W / SUPER + Q",
+   "Close window"
+  ],
+  [
+   "CTRL ALT + DELETE",
+   "Close all windows"
+  ],
+  [
+   "SUPER + TAB",
+   "Workspace overview"
+  ],
+  [
+   "XF86AudioRaiseVolume",
+   "Volume up"
+  ],
+  [
+   "SUPER + LEFT MOUSE BUTTON",
+   "Drag window"
+  ],
+  [
+   "SUPER ALT + K",
+   "Tmux keybindings"
+  ]
+ ]
+}

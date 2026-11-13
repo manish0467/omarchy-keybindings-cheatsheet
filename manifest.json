@@ -1,0 +1,24 @@
+{
+  "schemaVersion": 1,
+  "id": "io.github.manish0467.keybindings-cheatsheet",
+  "name": "Keybinding Cheatsheet",
+  "version": "0.1.0",
+  "author": "Manish",
+  "license": "MIT",
+  "description": "Searchable keybinding cheat sheet with personal notes and tags, layered over Omarchy's own keybinding display. Strictly read-only: it never runs bindings.",
+  "repository": "https://github.com/manish0467/omarchy-keybindings-cheatsheet",
+  "homepage": "https://github.com/manish0467/omarchy-keybindings-cheatsheet",
+  "kinds": [
+    "bar-widget"
+  ],
+  "entryPoints": {
+    "barWidget": "BarWidget.qml"
+  },
+  "barWidget": {
+    "displayName": "Keybinding Cheatsheet",
+    "description": "Searchable keybinding list with your own notes and tags",
+    "category": "Productivity",
+    "allowMultiple": false,
+    "defaultSection": "right"
+  }
+}

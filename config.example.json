@@ -1,0 +1,6 @@
+{
+  "_comment": "Example of the widget entry in ~/.config/omarchy/shell.json (inside bar.layout.<section>). Every key except \"id\" is optional; the values shown are the defaults. Remove this _comment line.",
+  "id": "io.github.manish0467.keybindings-cheatsheet",
+
+  "mock": ""
+}

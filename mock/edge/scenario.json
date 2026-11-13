@@ -1,0 +1,36 @@
+{
+ "records": [
+  [
+   "SUPER + E",
+   "Runs editor → with an arrow"
+  ],
+  [
+   "SUPER + COMMA",
+   "Settings, with, commas"
+  ],
+  [
+   "SUPER + U",
+   ""
+  ],
+  [
+   "SUPER + SHIFT + B / SUPER + SHIFT + Q",
+   "Browser / alternate"
+  ]
+ ],
+ "annotations": [
+  {
+   "chord": "SUPER + E",
+   "note": "tags with duplicate spellings",
+   "tags": [
+    "Work",
+    "work",
+    "",
+    "  ",
+    "XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX",
+    "ok"
+   ],
+   "createdAt": 1763000000,
+   "updatedAt": 1763000000
+  }
+ ]
+}
