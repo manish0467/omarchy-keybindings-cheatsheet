@@ -1,6 +1,15 @@
 # Design: io.github.manish0467.keybindings-cheatsheet
 
-Status: **APPROVED (2026-11-13) — user accepted all four recommendations: D1 note replaces description (built-in stays searchable + tooltip), D2 bar button (keyboard glyph, panel owns data), D3 annotation keyed by chord with orphans section + auto re-attach, D4 re-run `--print` on every panel open (no plugin-side cache).**
+Status: **SHIPPED (2026-11-13) — v0.1.0 published, installed, and submitted to the plugin marketplace.**
+
+Decisions (user accepted all four recommendations on 2026-11-13): D1 note replaces description (built-in stays searchable + tooltip), D2 bar button (keyboard glyph, panel owns data), D3 annotation keyed by chord with orphans section + auto re-attach, D4 re-run `--print` on every panel open (no plugin-side cache).
+
+Completion record:
+- Repo: https://github.com/manish0467/omarchy-keybindings-cheatsheet (default branch `main`, commit `5a5da90`, tag + release `v0.1.0`).
+- Fresh-clone verification in `/tmp/opencode/verify-kb`: 55 tests on 3.14 + 3.9, `tests/lint.sh` clean, `omarchy plugin validate` clean, mock run correct.
+- Live verification on the user's machine: panel renders the official 259-record list; editor opens (auto-focus, keyboard flow); full save pipeline verified end-to-end (`Ctrl+Enter` → helper `set` → state file → row shows note replacing description with ✎, tag pill, built-in description in tooltip, status "1 noted", tag chip with count).
+- Marketplace submission filed: omacom/omarchy-plugin-marketplace#14852 (title `[Plugin]: io.github.manish0467.keybindings-cheatsheet`, Category Productivity, Tags Productivity/Bar/Quickshell, full maintainer notes, all 5 checklist boxes); OPEN; awaiting triage.
+- Bugs found and fixed during live testing: `FilterInput` has no placeholder (overlay-Text pattern); editor ids live inside the panel `content` component (root-level `noteField`/`tagField` aliases); helper blocked reading stdin to EOF (now single-line reads, panel writes newline-terminated payload); `TextArea` consumes Tab/Enter before attached handlers (`Keys.priority: Keys.BeforeItem`); mutation errors were hidden behind the editor overlay (error line inside the editor).
 Target: Omarchy 4.5.0-3, Quickshell "Quattro" shell, Hyprland with Lua config bridge. Same architecture and standards as io.github.manish0467.btrfs-snapshots (approved + published).
 
 The gap this fills: Omarchy's keybinding descriptions are baked into `o.bind(...)` calls — defaults under `/usr/share/omarchy/` (overwritten by `omarchy update`), user ones in `~/.config/hypr/bindings.lua`. There is no official override of a description, and no place to attach personal notes or tags. The LOR article (chastnik/omarchy-rus) worked around it by generating a modified copy of Omarchy's script; we will not touch Omarchy internals at all — we layer user annotations on top of the official data in our own panel.
