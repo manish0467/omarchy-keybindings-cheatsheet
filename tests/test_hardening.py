@@ -114,6 +114,14 @@ class TestDefensiveState(unittest.TestCase):
         self.assertEqual(code, 0)
         self.assertEqual(doc["state"], "ok")
 
+    def test_write_json_atomic_is_owner_only(self):
+        # Confidential notes must never be left world-readable by a 022 umask.
+        import os, stat
+        p = self.tmp / "notes.json"
+        kb.write_json_atomic(p, {"schema": 1, "notes": [{"chord": "x", "note": "secret"}]})
+        self.assertTrue(p.exists())
+        self.assertEqual(stat.S_IMODE(p.stat().st_mode), 0o600)
+
     def test_binary_garbage(self):
         self.write("\x00\x01\x02binary noise")
         code, doc = run_cli("check", "--mock", "normal", "--state-dir", str(self.tmp))

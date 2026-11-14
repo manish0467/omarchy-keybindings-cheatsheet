@@ -36,7 +36,7 @@ import time
 from pathlib import Path
 
 SCHEMA = 1
-VERSION = "0.1.0"
+VERSION = "0.1.1"
 PLUGIN_ID = "io.github.manish0467.keybindings-cheatsheet"
 
 # ---------------------------------------------------------------------------
@@ -88,6 +88,7 @@ def write_json_atomic(path, data):
         with open(tmp, "w", encoding="utf-8") as fh:
             json.dump(data, fh, indent=1, sort_keys=True)
             fh.write("\n")
+        os.chmod(str(tmp), 0o600)
         os.replace(str(tmp), str(path))
     except OSError:
         pass  # annotations are the user's data; report loss via return value

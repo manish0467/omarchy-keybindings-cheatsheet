@@ -2,7 +2,7 @@
   "schemaVersion": 1,
   "id": "io.github.manish0467.keybindings-cheatsheet",
   "name": "Keybinding Cheatsheet",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "author": "Manish",
   "license": "MIT",
   "description": "Searchable keybinding cheat sheet with personal notes and tags, layered over Omarchy's own keybinding display. Strictly read-only: it never runs bindings.",
