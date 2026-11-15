@@ -36,3 +36,7 @@ Initial release.
   Omarchy 4.5), the plugin is structurally incapable of executing a binding.
 - The only writes are the annotation file inside the plugin's own state
   directory.
+
+## 0.1.2 — 2026-11-15
+
+- Security: temp file now created with mode 0600 via os.open(O_NOFOLLOW) (was chmod after open), closing the read-before-chmod window and the symlink-following vector reported by HANCORE-linux. Lock file likewise opened with O_NOFOLLOW.
